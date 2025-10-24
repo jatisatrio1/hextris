@@ -10,6 +10,6 @@ services:
     image: jatisatrio/web-hextris
     build: .
     ports:
-      - 6000:80
+      - 8081:80
     networks:
       - micro-net
