@@ -6,9 +6,9 @@ networks:
     driver: bridge
 
 services:
-  web-hextris:
+  web-hextr:
     image: jatisatrio/web-hextris
-    build: ./web-hextris
+    build: .
     ports:
       - 6000:80
     networks:
