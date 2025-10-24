@@ -6,12 +6,10 @@ networks:
     driver: bridge
 
 services:
-  vote:
+  web-hextris:
     image: jatisatrio/web-hextris
     build: ./web-hextris
     ports:
       - 6000:80
-    depends_on:
-      - redis
     networks:
       - micro-net
