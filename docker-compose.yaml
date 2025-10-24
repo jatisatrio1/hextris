@@ -1,0 +1,17 @@
+volumes:
+  db-data:
+
+networks:
+  micro-net:
+    driver: bridge
+
+services:
+  vote:
+    image: jatisatrio/hextris
+    build: ./hextris
+    ports:
+      - 6000:80
+    depends_on:
+      - redis
+    networks:
+      - micro-net
