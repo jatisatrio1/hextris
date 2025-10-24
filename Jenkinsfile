@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Pull Source Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/jatisatrio1/hextris.git'
+                git branch: 'gh-pages', url: 'https://github.com/jatisatrio1/hextris.git'
             }
         }
         stage('Build Container') {
