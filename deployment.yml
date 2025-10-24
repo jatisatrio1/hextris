@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-web-hextris
+  labels:
+    app: deployment-web-hextris
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: deployment-web-hextris
+  template:
+    metadata:
+      labels:
+        app: deployment-web-hextris
+    spec:
+      containers:
+      - name: ct-web-hextris
+        image: jatisatrio/web-hextris
+        ports:
+        - containerPort: 80
